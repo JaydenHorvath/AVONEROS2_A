@@ -1,6 +1,7 @@
-/home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/config/controllers.yaml
+/home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/config/ackermann_drive_controller.yaml
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/config/drive_bot.rviz
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/config/empty.yaml
+/home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/config/ros_gz_bridge.yaml
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/config/view_bot.rviz
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/description/assets/Chassis_Suspension.stl
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/description/assets/chassis.part
@@ -19,7 +20,10 @@
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/description/inertial_macros.xacro
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/description/robot.urdf.xacro
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/description/robot_core.xacro
+/home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/description/ros2_control.xacro
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/launch/launch_sim.launch.py
+/home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/launch/rosbridge.launch.py
+/home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/launch/roscontrol.launch.py
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/launch/rsp.launch.py
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/launch/simple.launch.py
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/worlds/empty.world

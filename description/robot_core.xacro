@@ -190,7 +190,7 @@
         <collision>
             <origin xyz="-8.09391e-17 7.65875e-18 0.17" rpy="1.5708 0 0"/>
             <geometry>
-                    <mesh filename="file:///home/jay/ros2_ws/src/articubot_one/description/assets/wheel.stl"/>      
+                    <sphere radius="0.2"/> 
                  <!--  <box size="0.3 0.3 0.15"/> -->
             </geometry>
         </collision>
@@ -226,7 +226,7 @@
         <collision>
             <origin xyz="-1.59877e-17 7.65404e-18 0.17" rpy="1.5708 0 0"/>
             <geometry>
-                    <mesh filename="file:///home/jay/ros2_ws/src/articubot_one/description/assets/wheel.stl"/>      
+                     <sphere radius="0.2"/>    
                  <!--  <box size="0.3 0.3 0.15"/> -->
             </geometry>
         </collision>
@@ -276,7 +276,7 @@
         <material>Gazebo/Black</material>
     </gazebo>
 
-    <joint name="FRwheel" type="continuous">
+    <joint name="FRWheel" type="continuous">
         <origin xyz="0.10836 0 0.09" rpy="1.5708 0 -1.5708"/>
         <parent link="front_right_wheel_hub"/>
         <child link="front_right_wheel"/>
@@ -296,7 +296,8 @@
         <collision>
             <origin xyz="2.22045e-16 0 0.17" rpy="1.5708 0 1.5708"/>
             <geometry>
-                    <mesh filename="file:///home/jay/ros2_ws/src/articubot_one/description/assets/wheel.stl"/>      
+                   <!-- <mesh filename="file:///home/jay/ros2_ws/src/articubot_one/description/assets/wheel.stl"/>      -->
+                    <sphere radius="0.2"/>
                  <!--  <box size="0.3 0.3 0.15"/> -->
             </geometry>
         </collision>
@@ -366,7 +367,7 @@
         <collision>
         <origin xyz="0 0 0.17" rpy="1.5708 0 0"/>
         <geometry>
-                    <mesh filename="file:///home/jay/ros2_ws/src/articubot_one/description/assets/wheel.stl"/>      
+                     <sphere radius="0.2"/> 
                  <!--  <box size="0.3 0.3 0.15"/> -->
         </geometry>
         </collision>
@@ -379,7 +380,7 @@
         <material>Gazebo/Grey</material>
     </gazebo>
 
-
+<!--
 
         <gazebo>
 
@@ -398,7 +399,7 @@
                 <odom_publish_frequency>50</odom_publish_frequency>
                 <max_velocity>10</max_velocity>
                 <max_acceleration>5.0</max_acceleration>
-                <!-- REVERSE DONUT SIM <max_jerk>10.0</max_jerk> -->
+             
                
                  <odom_topic>/model/my_robot/odometry</odom_topic>
               <tf_topic>/model/my_robot/tf</tf_topic>
@@ -409,6 +410,9 @@
             </plugin>
 
 
+
+        
+
            <plugin name="ignition::gazebo::systems::PosePublisher"
         filename="libignition-gazebo-pose-publisher-system.so">
           <publish_link_pose>true</publish_link_pose>
@@ -418,13 +422,7 @@
         </plugin>
 
 
-   <!--
-       <plugin name="ignition::gazebo::systems::OdometryPublisher"
-        filename="libignition-gazebo6-odometry-publisher-system.so">
-  <odom_frame>odom</odom_frame>
-  <robot_base_frame>base_link</robot_base_frame>
-
-  -->
+ 
 
      
               
@@ -433,8 +431,7 @@
        
 
 
-      <!-- ign topic -t "/model/my_robot/cmd_vel" -m ignition.msgs.Twist -p "linear: {x: 5}, angular: {z: -5}"
- -->
+   
 
       <plugin filename="libignition-gazebo-joint-state-publisher-system.so"
         name="ignition::gazebo::systems::JointStatePublisher">
@@ -447,9 +444,8 @@
       </gazebo>
  
 
-
+-->
 
 
 
 </robot>
-

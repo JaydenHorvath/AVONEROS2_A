@@ -35,6 +35,23 @@ def generate_launch_description():
         ]
     )
 
+    robot_controllers = '/home/jay/ros2_ws/src/articubot_one/config/ackermann_drive_controller.yaml'
+
+
+    joint_state_broadcaster_spawner = Node(
+        package='controller_manager',
+        executable='spawner',
+        arguments=['joint_state_broadcaster'],
+    )
+    ackermann_steering_controller_spawner = Node(
+        package='controller_manager',
+        executable='spawner',
+        arguments=['ackermann_steering_controller',
+                   '--param-file',
+                   robot_controllers,
+                   ],
+    )
+
     return LaunchDescription([
         # Set environment variables for NVIDIA GPU offload
         SetEnvironmentVariable(name='__NV_PRIME_RENDER_OFFLOAD', value='1'),
