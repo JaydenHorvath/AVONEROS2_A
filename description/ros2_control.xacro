@@ -7,46 +7,40 @@
     </hardware>
 
   <!-- front steering -->
-    <joint name="LSteer">
-      <command_interface name="position"/>
-      <state_interface   name="position"/>
-    </joint>
-    <joint name="RSteer">
-      <command_interface name="position"/>
-      <state_interface   name="position"/>
-    </joint>
+  <joint name="LSteer">
+    <command_interface name="position"/>
+    <state_interface   name="position"/>
+  </joint>
+  <joint name="RSteer">
+    <command_interface name="position"/>
+    <state_interface   name="position"/>
+  </joint>
 
-    <!-- rear drive -->
-    <joint name="RLMotor">
-      <command_interface name="velocity"/>
-      
-      <state_interface   name="velocity"/>
-      <state_interface   name="position"/>
-      
-    </joint>
-    <joint name="RRMotor">
-      <command_interface name="velocity"/>
-     
-      <state_interface   name="velocity"/>
-      <state_interface   name="position"/>
-      
-    </joint>
+  <!-- rear drive -->
+  <joint name="RLMotor">
+    <command_interface name="velocity"/>
+    <state_interface   name="velocity"/>
+    <state_interface   name="position"/>
+  </joint>
+  <joint name="RRMotor">
+    <command_interface name="velocity"/>
+    <state_interface   name="velocity"/>
+    <state_interface   name="position"/>
+  </joint>
 
+  <!-- front wheels (braking via effort command) -->
+  <joint name="FLWheel">
 
+    <state_interface   name="position"/>
 
-    <joint name="FLWheel">
-     
-      <state_interface   name="position"/>
-     
-    </joint>
-    <joint name="FRWheel">
-   
-      <state_interface   name="position"/>
-    
-    </joint>
+  </joint>
+  <joint name="FRWheel">
 
+    <state_interface   name="position"/>
 
-  </ros2_control>
+  </joint>
+
+</ros2_control>
 
   <gazebo>
     <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">

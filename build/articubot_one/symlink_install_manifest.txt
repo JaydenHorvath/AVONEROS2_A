@@ -16,8 +16,11 @@
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/description/assets/rear_wheel_hub.stl
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/description/assets/wheel.part
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/description/assets/wheel.stl
+/home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/description/camera.xacro
+/home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/description/depthcamera.xacro
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/description/gazebo_control.xacro
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/description/inertial_macros.xacro
+/home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/description/rgbdcamera.xacro
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/description/robot.urdf.xacro
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/description/robot_core.xacro
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/description/ros2_control.xacro
@@ -27,7 +30,14 @@
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/launch/rsp.launch.py
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/launch/simple.launch.py
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/worlds/empty.world
+/home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/worlds/models/blue_cone/meshes/cone_blue.dae
+/home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/worlds/models/blue_cone/model.config
+/home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/worlds/models/blue_cone/model.sdf
+/home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/worlds/models/yellow_cone/meshes/cone_yellow.dae
+/home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/worlds/models/yellow_cone/model.config
+/home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/worlds/models/yellow_cone/model.sdf
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/worlds/obstacles.world
+/home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/worlds/skidpad.world
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/ament_index/resource_index/package_run_dependencies/articubot_one
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/ament_index/resource_index/parent_prefix_path/articubot_one
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/environment/ament_prefix_path.sh
