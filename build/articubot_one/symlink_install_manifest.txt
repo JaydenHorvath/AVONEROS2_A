@@ -1,3 +1,4 @@
+/home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/config/Nav2.yaml
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/config/ackermann_drive_controller.yaml
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/config/drive_bot.rviz
 /home/jay/ros2_ws/src/articubot_one/install/articubot_one/share/articubot_one/config/ekf.yaml

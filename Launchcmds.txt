@@ -22,8 +22,20 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard \
     -p repeat_rate:=10.0 \
     -p stamped:=true
 
+# run joy node 
+ros2 run joy joy_node
+
+
+# current working joy cmd
+ ros2 run teleop_twist_joy teleop_node   --ros-args     -p stamp:=true     -p axis_linear.x:=1     -p scale_linear.x:=5.0     -p axis_angular.yaw:=3     -p scale_angular.yaw:=2.0     -p enable_button:=4   -r /cmd_vel:=/ackermann_steering_controller/reference_unstamped
+
+
+
+
 #run mapping
 ros2 launch slam_toolbox online_async_launch.py params_file:=./config/mapper_params_online_async.yaml use_sim_time:=true
+
+
 
 # run map server 
 ros2 run nav2_map_server map_server --ros-args -p yaml_filename:=mapA.yaml -p use_sim_time:=true
@@ -31,12 +43,18 @@ ros2 run nav2_map_server map_server --ros-args -p yaml_filename:=mapA.yaml -p us
 #bringup map server 
 ros2 run nav2_util lifecycle_bringup map_server
 
+
+
 # run amcl 
 ros2 run nav2_amcl amcl --ros-args -p use_sim_time:=true
 
 # bringup amcl 
 
 ros2 run nav2_util lifecycle_bringup amcl
+
+# remap cmd_vel for nav2
+ros2 run topic_tools relay /cmd_vel /ackermann_steering_controller/reference_unstamped
+
 
 
 
