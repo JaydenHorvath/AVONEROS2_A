@@ -23,7 +23,7 @@ ackermann_steering_controller:
     reference_timeout: 2.0
     rear_wheels_names: ['RLMotor', 'RRMotor']
     front_wheels_names: ['LSteer', 'RSteer']
-    use_stamped_vel: true
+    use_stamped_vel: false
     open_loop: false
     velocity_rolling_window_size: 10
     base_frame_id: base_link

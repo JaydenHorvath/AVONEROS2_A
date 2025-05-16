@@ -69,40 +69,73 @@ def generate_launch_description():
             # rgbd
 
               # point cloud
-            '/world/skidpad/model/my_robot/link/base_link/sensor/rgbdcamera/points@sensor_msgs/msg/PointCloud2[ignition.msgs.PointCloudPacked',
+            '/world/empty/model/my_robot/link/base_link/sensor/rgbdcamera/points@sensor_msgs/msg/PointCloud2[ignition.msgs.PointCloudPacked',
 
              # camera‐info
-            '/world/skidpad/model/my_robot/link/base_link/sensor/rgbdcamera/camera_info@sensor_msgs/msg/CameraInfo[ignition.msgs.CameraInfo',
+            '/world/empty/model/my_robot/link/base_link/sensor/rgbdcamera/camera_info@sensor_msgs/msg/CameraInfo[ignition.msgs.CameraInfo',
             # depth image
-            '/world/skidpad/model/my_robot/link/base_link/sensor/rgbdcamera/depth_image@sensor_msgs/msg/Image[ignition.msgs.Image',       
-                    
-            '/world/skidpad/model/my_robot/link/base_link/sensor/rgbdcamera/image@sensor_msgs/msg/Image[ignition.msgs.Image',
+            '/world/empty/model/my_robot/link/base_link/sensor/rgbdcamera/depth_image@sensor_msgs/msg/Image[ignition.msgs.Image',             
+            '/world/empty/model/my_robot/link/base_link/sensor/rgbdcamera/image@sensor_msgs/msg/Image[ignition.msgs.Image',
 
+             # IMU (if you want it too)
+            '/imu@sensor_msgs/msg/Imu[ignition.msgs.IMU',
+
+            # LIDAR: raw scan + pointcloud
+            '/lidar@sensor_msgs/msg/LaserScan[ignition.msgs.LaserScan',
+            '/lidar/points@sensor_msgs/msg/PointCloud2[ignition.msgs.PointCloudPacked',
 
                     ],
         remappings=[
         
             #rgbd
              # image
-            ('/world/skidpad/model/my_robot/link/base_link/sensor/rgbdcamera/image',
+            ('/world/empty/model/my_robot/link/base_link/sensor/rgbdcamera/image',
             '/camera/rgbd/image_raw'),
 
 
-             ('/world/skidpad/model/my_robot/link/base_link/sensor/rgbdcamera/camera_info',
+             ('/world/empty/model/my_robot/link/base_link/sensor/rgbdcamera/camera_info',
             '/camera/rgbd/camera_info'),
 
             # Depth point cloud
-            ('/world/skidpad/model/my_robot/link/base_link/sensor/rgbdcamera/points',
+            ('/world/empty/model/my_robot/link/base_link/sensor/rgbdcamera/points',
             '/camera/rgbd/points'),
 
             # Depth image
-            ('/world/skidpad/model/my_robot/link/base_link/sensor/rgbdcamera/depth_image',
+            ('/world/empty/model/my_robot/link/base_link/sensor/rgbdcamera/depth_image',
             '/camera/rgbd/depth_image'),
 
+                 # push the LaserScan into /scan
+            ('/lidar', '/scan'),
+            # leave the pointcloud on /lidar/points
+            ('/lidar/points', '/lidar/points'),
+        ]
 
 
+        
+    )
+
+
+    # 1) depth_image → /depth_scan
+    depth_to_scan = Node(
+        package='depthimage_to_laserscan',
+        executable='depthimage_to_laserscan_node',
+        name='depth_to_scan',
+        output='screen',
+        parameters=[
+            {'use_sim_time': True},
+            {'range_min': 0.5},        # adjust to your environment
+            {'range_max': 20.0},
+            {'scan_height': 10},
+            {'output_frame_id': 'base_link'},
+        ],
+        remappings=[
+            ('image', '/camera/rgbd/depth_image'),
+            ('camera_info', '/camera/rgbd/camera_info'),
+            ('scan', '/depth_scan'),
         ]
     )
+
+
     # Start Ignition Gazebo via gz_sim.launch.py
     gz_sim = IncludeLaunchDescription(
     PythonLaunchDescriptionSource(
@@ -113,10 +146,11 @@ def generate_launch_description():
         ])
     ),
     launch_arguments={
-        'gz_args': '-r -v1 /home/jay/ros2_ws/src/articubot_one/worlds/skidpad.world'
+        'gz_args': '-r -v1 /home/jay/ros2_ws/src/articubot_one/worlds/joint_control_test.sdf'
     }.items()
     )
 
+    #
 
     # Spawn the robot entity in Ignition
     gz_spawn_entity = Node(
@@ -155,12 +189,29 @@ def generate_launch_description():
 
     # TF relay from controller to /tf
     topic_remapping = Node(
-        package='topic_tools',
+       package='topic_tools',
         executable='relay',
         name='tf_relay',
         arguments=['/ackermann_steering_controller/tf_odometry', '/tf'],
-        output='screen'
+       output='screen'
     )
+
+    ekf_node = Node(
+        package='robot_localization',
+        executable='ekf_node',
+        name='ekf_filter_node',
+        output='screen',
+        parameters=[
+            {'use_sim_time': use_sim_time},
+            PathJoinSubstitution([
+                FindPackageShare('articubot_one'),
+                'config',
+                'ekf.yaml'
+            ])
+        ]
+    )
+
+  
 
     # RViz (delayed until simulation is ready)
     rviz_node = TimerAction(
@@ -199,6 +250,11 @@ def generate_launch_description():
         # ros2_control node
         ros2_control_node,
 
+        depth_to_scan,
+        
+        ekf_node,
+      
+       
         
         # Sequence controllers: joint_state -> ackermann -> brake
         RegisterEventHandler(
@@ -217,5 +273,5 @@ def generate_launch_description():
         # RViz
         rviz_node,
 
-        
-    ])
+    ]
+    )

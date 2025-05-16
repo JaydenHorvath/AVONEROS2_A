@@ -24,9 +24,14 @@
     </visual>
     <collision name="collision">
       <geometry>
+      <!--
         <mesh>
           <uri>model://blue_cone/meshes/cone_blue.dae</uri>
         </mesh>
+      -->
+       
+      <cylinder><radius>0.1</radius><length>0.3</length></cylinder>
+  
       </geometry>
     </collision>
   </link>

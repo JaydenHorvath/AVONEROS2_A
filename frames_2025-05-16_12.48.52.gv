@@ -1,0 +1,19 @@
+digraph G {
+"base_link" -> "base_footprint"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"odom" -> "base_link"[label=" Broadcaster: default_authority\nAverage rate: 100.358\nBuffer length: 2.79\nMost recent transform: 41.78\nOldest transform: 38.99\n"];
+"base_link" -> "chassis"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"chassis" -> "imu_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"chassis" -> "laser_frame"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"chassis" -> "rgbdcamera_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"rgbdcamera_link" -> "rgbdcamera_link_optical"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"front_left_wheel_hub" -> "front_left_wheel"[label=" Broadcaster: default_authority\nAverage rate: 20.364\nBuffer length: 2.75\nMost recent transform: 41.75\nOldest transform: 39.0\n"];
+"chassis" -> "front_left_wheel_hub"[label=" Broadcaster: default_authority\nAverage rate: 20.364\nBuffer length: 2.75\nMost recent transform: 41.75\nOldest transform: 39.0\n"];
+"front_right_wheel_hub" -> "front_right_wheel"[label=" Broadcaster: default_authority\nAverage rate: 20.364\nBuffer length: 2.75\nMost recent transform: 41.75\nOldest transform: 39.0\n"];
+"chassis" -> "front_right_wheel_hub"[label=" Broadcaster: default_authority\nAverage rate: 20.364\nBuffer length: 2.75\nMost recent transform: 41.75\nOldest transform: 39.0\n"];
+"chassis" -> "left_motor"[label=" Broadcaster: default_authority\nAverage rate: 20.364\nBuffer length: 2.75\nMost recent transform: 41.75\nOldest transform: 39.0\n"];
+"chassis" -> "right_motor"[label=" Broadcaster: default_authority\nAverage rate: 20.364\nBuffer length: 2.75\nMost recent transform: 41.75\nOldest transform: 39.0\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1747363732.7174904"[ shape=plaintext ] ;
+}->"odom";
+}

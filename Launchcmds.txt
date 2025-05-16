@@ -14,6 +14,32 @@ colcon build
 source install/setup.bash
 
 
+#keyboard teleop 
+
+ros2 run teleop_twist_keyboard teleop_twist_keyboard \
+  --ros-args \
+    --remap cmd_vel:=/ackermann_steering_controller/reference \
+    -p repeat_rate:=10.0 \
+    -p stamped:=true
+
+#run mapping
+ros2 launch slam_toolbox online_async_launch.py params_file:=./config/mapper_params_online_async.yaml use_sim_time:=true
+
+# run map server 
+ros2 run nav2_map_server map_server --ros-args -p yaml_filename:=mapA.yaml -p use_sim_time:=true
+
+#bringup map server 
+ros2 run nav2_util lifecycle_bringup map_server
+
+# run amcl 
+ros2 run nav2_amcl amcl --ros-args -p use_sim_time:=true
+
+# bringup amcl 
+
+ros2 run nav2_util lifecycle_bringup amcl
+
+
+
 # run controller 
  ros2 run teleop_twist_joy teleop_node   --ros-args   -p axis_linear.x:=1   -p scale_linear.x:=1.0   -p axis_angular.yaw:=3   -p scale_angular.yaw:=-2.0   -p enable_button:=4   -r /cmd_vel:=/model/my_robot/cmd_vel
 

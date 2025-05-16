@@ -2,31 +2,47 @@
 <sdf version="1.6">
   <world name="skidpad">
 
-    <physics type="ode">
-      <gravity>0 0 -9.8</gravity>
+    <physics name="dart_physics" type="dart">
+      <max_step_size>0.001</max_step_size>
+      <real_time_update_rate>100</real_time_update_rate>
+      <thread_count>20</thread_count>          <!-- match your CPU cores -->
     </physics>
 
     <plugin
-      filename="gz-sim-physics-system"
-      name="gz::sim::systems::Physics">
+      filename="gz-sim-scene-broadcaster-system"
+      name="gz::sim::systems::SceneBroadcaster">
+      <publish_rate>10</publish_rate>
     </plugin>
+
+  
+
     <plugin
       filename="gz-sim-user-commands-system"
       name="gz::sim::systems::UserCommands">
     </plugin>
+
+ 
+   
     <plugin
-      filename="gz-sim-scene-broadcaster-system"
-      name="gz::sim::systems::SceneBroadcaster">
+      filename="gz-sim-physics-system"
+      name="gz::sim::systems::Physics">
     </plugin>
+
+
     <plugin
       filename="gz-sim-sensors-system"
       name="gz::sim::systems::Sensors">
       <render_engine>ogre2</render_engine>
     </plugin>
+
+    
     <plugin
       filename="gz-sim-imu-system"
       name="gz::sim::systems::Imu">
     </plugin>
+  
+
+
 
     <model name="ground_plane">
       <static>true</static>
@@ -70,17 +86,49 @@
       <direction>-0.5 0.5 -1</direction>
     </light>
 
-    <!-- Blue cone -->
+   
+    <!-- Blue cone at x=5 -->
     <include>
       <uri>model://blue_cone</uri>
+      <name>blue_cone_5</name>
       <pose>5 2 0.15 0 0 0</pose>
     </include>
 
-    <!-- Yellow cone -->
+    <!-- Yellow cone at x=5 -->
     <include>
       <uri>model://yellow_cone</uri>
+      <name>yellow_cone_5</name>
       <pose>5 -2 0.15 0 0 0</pose>
     </include>
 
+
+
+    <include>
+      <uri>model://blue_cone</uri>
+      <name>blue_cone_7</name>
+      <pose>7 2 0.15 0 0 0</pose>
+    </include>
+
+   
+    <include>
+      <uri>model://yellow_cone</uri>
+      <name>yellow_cone_7</name>
+      <pose>7 -2 0.15 0 0 0</pose>
+    </include>
+
+    
+    <include>
+      <uri>model://blue_cone</uri>
+      <name>blue_cone_9</name>
+      <pose>9 2 0.15 0 0 0</pose>
+    </include>
+
+  
+    <include>
+      <uri>model://yellow_cone</uri>
+      <name>yellow_cone_9</name>
+      <pose>9 -2 0.15 0 0 0</pose>
+    </include>
+   
   </world>
 </sdf>
