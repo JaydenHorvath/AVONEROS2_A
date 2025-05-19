@@ -35,7 +35,7 @@ def generate_launch_description():
         ]
     )
 
-    robot_controllers = '/home/jay/ros2_ws/src/articubot_one/config/ackermann_drive_controller.yaml'
+    robot_controllers = '/home/jay/ros2_ws/src/avone/config/ackermann_drive_controller.yaml'
 
 
     joint_state_broadcaster_spawner = Node(

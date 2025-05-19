@@ -1,1 +1,0 @@
-/home/jay/ros2_ws/src/articubot_one/launch/simple.launch.py

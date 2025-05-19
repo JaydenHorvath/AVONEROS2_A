@@ -1,4 +1,0 @@
-Invoking command in '/home/jay/ros2_ws/src/articubot_one/build/articubot_one': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jay/ros2_ws/src/articubot_one/build/articubot_one -- -j32 -l32
-Invoked command in '/home/jay/ros2_ws/src/articubot_one/build/articubot_one' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jay/ros2_ws/src/articubot_one/build/articubot_one -- -j32 -l32
-Invoking command in '/home/jay/ros2_ws/src/articubot_one/build/articubot_one': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jay/ros2_ws/src/articubot_one/build/articubot_one
-Invoked command in '/home/jay/ros2_ws/src/articubot_one/build/articubot_one' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jay/ros2_ws/src/articubot_one/build/articubot_one

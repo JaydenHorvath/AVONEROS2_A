@@ -27,7 +27,7 @@ def generate_launch_description():
         PathJoinSubstitution([FindExecutable(name='xacro')]),
         ' ',
         PathJoinSubstitution([
-            FindPackageShare('articubot_one'),
+            FindPackageShare('avone'),
             'description', 'robot.urdf.xacro'
         ])
     ])
@@ -38,7 +38,7 @@ def generate_launch_description():
 
     # Controllers configuration
     robot_controllers = PathJoinSubstitution([
-        FindPackageShare('articubot_one'),
+        FindPackageShare('avone'),
         'config', 'ackermann_drive_controller.yaml'
     ])
 
@@ -146,7 +146,7 @@ def generate_launch_description():
         ])
     ),
     launch_arguments={
-        'gz_args': '-r -v1 /home/jay/ros2_ws/src/articubot_one/worlds/joint_control_test.sdf'
+        'gz_args': '-r -v1 /home/jay/ros2_ws/src/avone/worlds/joint_control_test.sdf'
     }.items()
     )
 
@@ -204,7 +204,7 @@ def generate_launch_description():
         parameters=[
             {'use_sim_time': use_sim_time},
             PathJoinSubstitution([
-                FindPackageShare('articubot_one'),
+                FindPackageShare('avone'),
                 'config',
                 'ekf.yaml'
             ])

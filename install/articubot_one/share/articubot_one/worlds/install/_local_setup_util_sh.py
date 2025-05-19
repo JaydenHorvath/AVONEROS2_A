@@ -1,1 +1,0 @@
-/home/jay/ros2_ws/src/articubot_one/worlds/install/_local_setup_util_sh.py

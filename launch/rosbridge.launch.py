@@ -8,7 +8,7 @@ from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
     # Update this to your actual package name
-    pkg_my_package = FindPackageShare('articubot_one')
+    pkg_my_package = FindPackageShare('avone')
 
     return LaunchDescription([
         Node(
