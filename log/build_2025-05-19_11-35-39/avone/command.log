@@ -1,0 +1,6 @@
+Invoking command in '/home/jay/ros2_ws/src/avone/build/avone': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/jay/ros2_ws/src/avone -DCMAKE_INSTALL_PREFIX=/home/jay/ros2_ws/src/avone/install/avone
+Invoked command in '/home/jay/ros2_ws/src/avone/build/avone' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/jay/ros2_ws/src/avone -DCMAKE_INSTALL_PREFIX=/home/jay/ros2_ws/src/avone/install/avone
+Invoking command in '/home/jay/ros2_ws/src/avone/build/avone': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jay/ros2_ws/src/avone/build/avone -- -j32 -l32
+Invoked command in '/home/jay/ros2_ws/src/avone/build/avone' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/jay/ros2_ws/src/avone/build/avone -- -j32 -l32
+Invoking command in '/home/jay/ros2_ws/src/avone/build/avone': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jay/ros2_ws/src/avone/build/avone
+Invoked command in '/home/jay/ros2_ws/src/avone/build/avone' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/jay/ros2_ws/src/avone/build/avone

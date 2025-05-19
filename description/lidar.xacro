@@ -41,7 +41,7 @@
             <pose relative_to='laser_frame'>0 0 0 0 0 0</pose>
             <topic>lidar</topic>
              <gz_frame_id>laser_frame</gz_frame_id>
-            <update_rate>8</update_rate>
+            <update_rate>10</update_rate>
             <ray>
                 <scan>
                     <horizontal>

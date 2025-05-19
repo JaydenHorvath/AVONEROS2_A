@@ -12,10 +12,10 @@ slam_toolbox:
     # ROS Parameters
     odom_frame: odom
     map_frame: map
-    base_frame: base_footprint
+    base_frame: base_frame
     scan_topic: /scan
     odom_topic: /odometry/filtered
-    mode: localisation
+    mode: localization
 
     use_sim_time: true
     # Publish both transforms
@@ -25,7 +25,7 @@ slam_toolbox:
     # if you'd like to immediately start continuing a map at a given pose
     # or at the dock, but they are mutually exclusive, if pose is given
     # will use pose
-    #map_file_name: /home/ros2_ws/src/articubot_one/mapA.yaml
+    map_file_name: /home/ros2_ws/src/avone/TrackA.yaml
     map_start_at_dock: true
 
     debug_logging: false

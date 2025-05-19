@@ -27,7 +27,7 @@ ros2 run joy joy_node
 
 
 # current working joy cmd
- ros2 run teleop_twist_joy teleop_node   --ros-args     -p stamp:=true     -p axis_linear.x:=1     -p scale_linear.x:=5.0     -p axis_angular.yaw:=3     -p scale_angular.yaw:=2.0     -p enable_button:=4   -r /cmd_vel:=/ackermann_steering_controller/reference_unstamped
+ ros2 run teleop_twist_joy teleop_node   --ros-args     -p stamp:=true     -p axis_linear.x:=1     -p scale_linear.x:=3.0     -p axis_angular.yaw:=3     -p scale_angular.yaw:=0.5    -p enable_button:=4   -r /cmd_vel:=/ackermann_steering_controller/reference_unstamped
 
 
 
@@ -63,6 +63,20 @@ ros2 run topic_tools relay /cmd_vel /ackermann_steering_controller/reference_uns
 
 # cmd_vel bridge
 ros2 run ros_ign_bridge parameter_bridge   /model/my_robot/cmd_vel@geometry_msgs/msg/Twist@ignition.msgs.Twist
+
+
+
+# CONE DETECTION 
+
+#train dataset using FSOCO and yolo11n
+yolo detect train data=datasets/FSOCO/data.yaml model=yolo11n.pt epochs=5 imgsz=640
+
+
+#run detection of a folder 
+yolo detect predict source=datasets/tests/SimTest  model=runs/detect/train4/weights/best.pt
+
+
+
 
       <plugin
                 filename="libignition-gazebo-ackermann-steering-system.so"

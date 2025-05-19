@@ -69,13 +69,13 @@ def generate_launch_description():
             # rgbd
 
               # point cloud
-            '/world/empty/model/my_robot/link/base_link/sensor/rgbdcamera/points@sensor_msgs/msg/PointCloud2[ignition.msgs.PointCloudPacked',
+            'rgbdcamera/points@sensor_msgs/msg/PointCloud2[ignition.msgs.PointCloudPacked',
 
              # camera‐info
-            '/world/empty/model/my_robot/link/base_link/sensor/rgbdcamera/camera_info@sensor_msgs/msg/CameraInfo[ignition.msgs.CameraInfo',
+            'rgbdcamera/camera_info@sensor_msgs/msg/CameraInfo[ignition.msgs.CameraInfo',
             # depth image
-            '/world/empty/model/my_robot/link/base_link/sensor/rgbdcamera/depth_image@sensor_msgs/msg/Image[ignition.msgs.Image',             
-            '/world/empty/model/my_robot/link/base_link/sensor/rgbdcamera/image@sensor_msgs/msg/Image[ignition.msgs.Image',
+            'rgbdcamera/depth_image@sensor_msgs/msg/Image[ignition.msgs.Image',             
+            'rgbdcamera/image@sensor_msgs/msg/Image[ignition.msgs.Image',
 
              # IMU (if you want it too)
             '/imu@sensor_msgs/msg/Imu[ignition.msgs.IMU',
@@ -89,19 +89,19 @@ def generate_launch_description():
         
             #rgbd
              # image
-            ('/world/empty/model/my_robot/link/base_link/sensor/rgbdcamera/image',
+            ('rgbdcamera/image',
             '/camera/rgbd/image_raw'),
 
 
-             ('/world/empty/model/my_robot/link/base_link/sensor/rgbdcamera/camera_info',
+             ('rgbdcamera/camera_info',
             '/camera/rgbd/camera_info'),
 
             # Depth point cloud
-            ('/world/empty/model/my_robot/link/base_link/sensor/rgbdcamera/points',
+            ('rgbdcamera/points',
             '/camera/rgbd/points'),
 
             # Depth image
-            ('/world/empty/model/my_robot/link/base_link/sensor/rgbdcamera/depth_image',
+            ('rgbdcamera/depth_image',
             '/camera/rgbd/depth_image'),
 
                  # push the LaserScan into /scan
@@ -158,10 +158,16 @@ def generate_launch_description():
         executable='create',
         output='screen',
         arguments=[
-            '-topic', 'robot_description',
-            '-name', 'my_robot',
-            '-allow_renaming', 'true'
-        ]
+        '-entity', 'my_robot',
+        '-topic', 'robot_description',
+        # x, y, z
+        #'-x', '-10.0',
+        #'-y', '11',
+        #'-z', '0.1',
+        # yaw (in radians). Positive rotates CCW, so –1.5708 is 90° right
+        #'--Y', '0'
+    ],
+     
     )
 
     # Load ros2_control + controllers

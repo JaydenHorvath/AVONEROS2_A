@@ -1,0 +1,128 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jay/ros2_ws/src/avone/build/avone
+-- Install configuration: ""
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/config
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/config/mapper_params_online_async.yaml
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/config/view_bot.rviz
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/config/ros_gz_bridge.yaml
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/config/ekf.yaml
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/config/Nav2.yaml
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/config/ackermann_drive_controller.yaml
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/config/drive_bot.rviz
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/depthcamera.xacro
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/camera.xacro
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/robot.urdf.xacro
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/sensors.xacro
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/inertial_macros.xacro
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/gazebo_control.xacro
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/lidar.xacro
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/ros2_control.xacro
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/rgbdcamera.xacro
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/assets
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/assets/chassis.stl
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/assets/rear_wheel_hub.part
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/assets/front_suspension.part
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/assets/wheel.stl
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/assets/front_wheel_hub.stl
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/assets/rear_wheel_hub.stl
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/assets/front_suspension.stl
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/assets/Chassis_Suspension.stl
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/assets/rear_suspension.stl
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/assets/wheel.part
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/assets/rear_suspension.part
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/assets/front_wheel_hub.part
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/assets/chassis.part
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/description/robot_core.xacro
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/launch
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/launch/simple.launch.py
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/launch/launch_sim.launch.py
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/launch/roscontrol.launch.py
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/launch/rosbridge.launch.py
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/launch/rsp.launch.py
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/random_cylinders.sdf
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/log
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/log/COLCON_IGNORE
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/log/build_2025-05-15_15-20-54
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/log/build_2025-05-15_15-20-54/events.log
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/log/build_2025-05-15_15-20-54/logger_all.log
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/log/latest_build
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/log/build_2025-05-16_12-10-56
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/log/build_2025-05-16_12-10-56/events.log
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/log/build_2025-05-16_12-10-56/logger_all.log
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/log/latest
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/joint_control_test.sdf
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/models
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/models/yellow_cone
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/models/yellow_cone/meshes
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/models/yellow_cone/meshes/cone_yellow.dae
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/models/yellow_cone/model.sdf
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/models/yellow_cone/model.config
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/models/blue_cone
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/models/blue_cone/meshes
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/models/blue_cone/meshes/cone_blue.dae
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/models/blue_cone/model.sdf
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/models/blue_cone/model.config
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/skidpad.world
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/empty.world
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/install
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/install/COLCON_IGNORE
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/install/local_setup.zsh
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/install/_local_setup_util_sh.py
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/install/setup.ps1
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/install/local_setup.bash
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/install/local_setup.sh
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/install/local_setup.ps1
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/install/setup.bash
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/install/_local_setup_util_ps1.py
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/install/.colcon_install_layout
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/install/setup.zsh
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/install/setup.sh
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/obstacles.world
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/build
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/build/COLCON_IGNORE
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/worlds/build/.built_by
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/ament_index/resource_index/package_run_dependencies/avone
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/ament_index/resource_index/parent_prefix_path/avone
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/environment/ament_prefix_path.sh
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/environment/ament_prefix_path.dsv
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/environment/path.sh
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/environment/path.dsv
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/local_setup.bash
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/local_setup.sh
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/local_setup.zsh
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/local_setup.dsv
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/package.dsv
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/ament_index/resource_index/packages/avone
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/cmake/avoneConfig.cmake
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/cmake/avoneConfig-version.cmake
+-- Installing: /home/jay/ros2_ws/src/avone/install/avone/share/avone/package.xml
